@@ -1,0 +1,549 @@
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ----- header ----- */
+.header {
+    position: fixed;
+    padding: 0 162px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    color: #ddd;
+    white-space: nowrap;
+}
+
+.header:hover {
+    background: #fff;
+    color: #444;
+}
+
+.header.on {
+    background: #0b1e3f;
+    color: #fff;
+}
+
+.header .box {
+    display: flex;
+    line-height: 100px;
+}
+
+.header .box h1 a {
+    display: block;
+    margin: 20px 0 0 0;
+    width: 140px;
+}
+
+.header .box h1 a {
+    width: 160px;
+    height: 50px;
+    background: url(../images/logo_wt.png) no-repeat center center/cover;
+}
+
+.header:hover .box h1 a {
+    background: url(../images/logo.png)no-repeat center center/cover;
+}
+
+.header a {
+    display: block;
+}
+
+.header .gnb {
+    margin: 0 0 0 auto;
+}
+
+.header .gnb .sub_menu {
+    font-weight: 500;
+}
+
+.header .gnb>ul {
+    display: flex;
+    gap: 40px;
+}
+
+.header .service {
+    margin: 0 0 0 50px;
+    font-size: 20px;
+}
+
+.header .service i {
+    margin: 0 0 0 5px;
+}
+
+/* ---------- main_slide ---------- */
+.main_visual {
+    position: relative;
+    height: 100vh;
+    /* height: calc(100vh - 101px); */
+    overflow: hidden;
+    color: #fff;
+}
+
+.main_visual .itm {
+    position: relative;
+    min-height: 1000px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.main_visual .itm .inner {
+    position: absolute;
+    top: 50%;
+    left: 67%;
+    transform: translate(0, -50%);
+    margin: 0 0 0 -600px;
+}
+
+.main_visual .itm01 {
+    background-image: url(../images/slide01.jpg);
+}
+
+.main_visual .itm02 {
+    background-image: url(../images/slide02.jpg);
+}
+
+.main_visual .itm03 {
+    background-image: url(../images/slide03.jpg);
+}
+
+.main_visual .itm h3 {
+    text-indent: -4px;
+    font-size: 55px;
+    font-weight: 600;
+    /* white-space: nowrap; */
+    color: #fff;
+    margin: 0 0 20px 0;
+    transform: translate(0, 100px);
+    opacity: 0;
+}
+
+.main_visual .itm.on h3 {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.main_visual .itm p {
+    width: 350px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 21px;
+    margin: 0 0 40px 0;
+    text-align: center;
+    transform: translate(0, 100px);
+    opacity: 0;
+}
+
+.main_visual .itm.on p {
+    width: 500px;
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: 0.5s 0.5s;
+}
+
+.main_visual .itm .btn {
+    position: absolute;
+    padding: 6px 22px;
+    border: 1px solid #fff;
+    bottom: -20%;
+    left: 36%;
+    transform: translate(0, 0);
+    opacity: 0;
+}
+
+.main_visual .itm.on .btn {
+    transform: translate(0, -50%);
+    opacity: 1;
+    transition: 0.5s 1s;
+}
+
+.main_visual .itm .btn i {
+    vertical-align: bottom;
+}
+
+/* 화살표 가운데로 배치 다시 하기 */
+/* .main_visual .itm .xi-arrow-right {
+    vertical-align: middle
+} */
+
+
+.main_visual .menu {
+    position: absolute;
+    bottom: 15%;
+    left: 75%;
+    display: flex;
+    transform: translate(0, 0);
+    margin: 0 0 0 -600px;
+    padding: 0 15px;
+}
+
+.main_visual .menu li {
+    position: relative;
+    width: 70px;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.main_visual .menu li::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.main_visual .menu li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #0b1e3f;
+}
+
+.main_visual .menu li.on::after {
+    width: 100%;
+    transition: 5s;
+}
+
+.main_visual .menu li a {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.main_visual .menu li.on a {
+    color: #0b1e3f;
+}
+
+.main_visual .arrows {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    display: flex;
+
+    transform: translate(-50%, -50%);
+    padding: 0 15px;
+    gap: 1500px;
+    justify-content: space-between;
+}
+
+
+/* 스크롤 아래로 내리는 버튼 만들기 */
+.main_visual .scr {
+    position: absolute;
+    left: 50%;
+    bottom: 100px;
+    padding: 0 15px;
+    transform: translate(-50%, -50%);
+    font-weight: 300;
+    color: #fff
+}
+
+.main_visual .slide_num {
+    position: absolute;
+    left: 23%;
+    top: 820px;
+
+    font-size: 20px;
+    font-weight: 500;
+    transform: translate(-100%, 0);
+    margin: 0 0 0 -16px;
+    padding: 0 15px;
+
+    color: #fff;
+}
+
+.main_visual .scr::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 15px;
+    width: 24px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0);
+    border: 2px solid #fff;
+    border-radius: 20px;
+}
+
+.main_visual .scr::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 26px;
+    width: 2px;
+    height: 10px;
+    background: #ddd;
+    border-radius: 1px;
+    animation: wheel 1s infinite;
+}
+
+@keyframes wheel {
+    0% {
+        transform: translate(0, 0);
+    }
+
+
+
+    100% {
+        transform: translate(0, 15px);
+    }
+
+
+}
+
+.main_visual .scr span {
+    position: absolute;
+    top: 13px;
+    left: 0;
+    white-space: nowrap;
+    font-size: 14px;
+    text-transform: uppercase;
+    transform: translate(calc(-100% - 20px), 0);
+}
+
+
+.main_visual .arrows i {
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.main_visual .arrows i:hover {
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+/*section - location */
+.main_location {
+    padding: 100px 0;
+}
+
+.location_box {
+    display: flex;
+    gap: 30px;
+}
+
+.main_location .loc_txt {
+    text-align: center;
+}
+
+.main_location .loc_txt h2 {
+    font-size: 55px;
+    font-weight: 500;
+    margin: 0 0 12px 0;
+}
+
+.main_location .loc_txt p {
+    font-size: 16px;
+    margin: 0 0 20px 0;
+}
+
+.main_location .loc_left {}
+
+.main_location .loc_right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.main_location .loc_right .loc_notice {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px 20px 0 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.main_location .loc_right .loc_notice h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    color: #0b1e3f;
+}
+
+.main_location .loc_right .loc_notice p {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 0 12px 0;
+}
+
+/* section - special */
+.main_special {
+    position: relative;
+    padding: 100px 0;
+    background: #f9f9f9;
+}
+
+.main_special .tit {
+    text-align: center;
+}
+
+.main_special .tit h2 {
+    font-size: 55px;
+    font-weight: 500;
+    margin: 0 0 12px 0;
+}
+
+.main_special .tit p {
+    font-size: 16px;
+    margin: 0 0 20px 0;
+}
+
+.main_special .arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1400px;
+    width: 100%;
+}
+
+.main_special .arrows i {
+    position: absolute;
+    top: 0;
+    padding: 10px;
+    color: #999;
+    background: #f9f9f9;
+    border-radius: 50%;
+    font-size: 50px;
+}
+
+.main_special .arrows i:hover {
+    color: #0b1e3f;
+}
+
+.main_special .arrows .left {
+    left: 0;
+}
+
+.main_special .arrows .right {
+    right: 0;
+}
+
+.product_slide {
+    margin: 0 -15px;
+}
+
+.product_slide figure {
+    padding: 0 15px;
+}
+
+.product_slide figure img {
+    border-radius: 10px;
+}
+
+/* 슬라이드 버튼 모양 */
+.product_slide .slick-dots {
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+
+.product_slide .slick-dots li {
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.product_slide .slick-dots li button {
+    font-size: 0;
+    color: #fff;
+    background: #ddd;
+    border: none;
+    outline: none;
+    width: 30px;
+    height: 3px;
+}
+
+.product_slide .slick-dots li.slick-active button {
+    background: #0b1e3f;
+}
+
+/* section 05 - main_background */
+.main_background {
+    padding: 100px 0;
+    position: relative;
+    background: url(../images/bg01.jpg) no-repeat left top/cover;
+}
+
+.main_background .bg_box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.main_background .bg_box .bg_txt {
+    margin: 0 0 30px 0;
+}
+
+.main_background .bg_box .bg_txt h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 10px 0;
+}
+
+.main_background .bg_box .bg_txt p {
+    font-size: 15px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.main_background .bg_content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    place-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.main_background .bg_content .bg_content_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 250px;
+    padding: 0 30px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+
+.main_background .bg_content .bg_content_box:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transition: 0.3s;
+}
+
+
+.main_background .bg_content .bg_content_box i {
+    font-size: 40px;
+    margin: 0 0 20px 0;
+}
+
+.main_background .bg_content .bg_content_box h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.main_background .bg_content .bg_content_box p {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.gg {
+    padding: 500px 0;
+    background: #f9f9f9;
+}
