@@ -63,15 +63,22 @@ $(function () {
         $('html, body').animate({ scrollTop: st - 100 }, 600)
     });
 
+    $('.mobile_btn').on('click', function () {
+        $(this).toggleClass('on');
+        $('.gnb').toggleClass('on');
+    });
+
+
+
     $('.product_slide').slick({
         arrows: false,
         dots: true,
-        slidesToShow: 3,
+        slidesToShow: 2,
         responsive: [
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 1,
                 }
             }
         ]
