@@ -91,5 +91,16 @@ $(function () {
         $('.product_slide').slick('slickNext');
     });
 
+    //to_top
+    //to_top 스크롤 위로 올리기
+    $('.to_top').on('click', function () {
+        $('html, body').animate({ scrollTop: 0 }, 600)
+    });
 
+    // to_top 스크롤 숨겼다가 나타내기
+    $(window).on('scroll', function () {
+        let sct = $(window).scrollTop();
+        // sct > 1000 ? $('.to_top').fadeIn(1000) : $('.to_top').fadeOut();
+        sct > 400 ? $('.to_top').addClass('on') : $('.to_top').removeClass('on');
+    });
 })
